@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="FileUpload\Temp\**" />
+    <Content Remove="FileUpload\Temp\**" />
+    <EmbeddedResource Remove="FileUpload\Temp\**" />
+    <None Remove="FileUpload\Temp\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="32feet.NET" Version="3.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tools.Common\Tools.Common.csproj" />
+    <ProjectReference Include="..\Tools.DataBase\Tools.DataBase.csproj" />
+    <ProjectReference Include="..\Tools.Helper\Tools.Helper.csproj" />
+    <ProjectReference Include="..\Tools.Instance\Tools.Instance.csproj" />
+    <ProjectReference Include="..\Tools.Interface\Tools.Interface.csproj" />
+    <ProjectReference Include="..\Tools.Model\Tools.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="FileUpload\QrCode\" />
+    <Folder Include="FileUpload\Gif\" />
+  </ItemGroup>
+
+</Project>

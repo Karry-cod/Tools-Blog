@@ -1,0 +1,133 @@
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  2024-04-29 11:27:12  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+异常原因：The SSL connection could not be established, see inner exception.；
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tools.Common.Http.Get(String Url) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Common\Http.cs:line 47
+   at Tools.Helper.IpifyHelper.GetLocation_CountryCity(String ip) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Helper\IpifyHelper.cs:line 30
+   at Tools.Instance.UserService.Login(String account, String password, String ip) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Instance\UserService.cs:line 340
+   at Tools.API.Controllers.UsersController.Login(String account, String password, String ip) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.API\Controllers\UsersController.cs:line 73
+   at lambda_method27(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Tools.Helper.Middles.WebSocketMiddle.WebSocketHandleMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Helper\Middles\WebSocketMiddle\WebsocketHandleMiddleware.cs:line 58
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Tools.Helper.Middles.ExceptionMiddle.ExceptionMiddleware.Invoke(HttpContext context) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Helper\Middles\ExceptionMiddle\ExceptionMiddleware.cs:line 31
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  2024-04-29 11:29:24  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+异常原因：The SSL connection could not be established, see inner exception.；
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tools.Common.Http.Get(String Url) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Common\Http.cs:line 47
+   at Tools.Helper.IpifyHelper.GetLocation_CountryCity(String ip) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Helper\IpifyHelper.cs:line 30
+   at Tools.Instance.UserService.Login(String account, String password, String ip) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Instance\UserService.cs:line 340
+   at Tools.API.Controllers.UsersController.Login(String account, String password, String ip) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.API\Controllers\UsersController.cs:line 73
+   at lambda_method27(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Tools.Helper.Middles.WebSocketMiddle.WebSocketHandleMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Helper\Middles\WebSocketMiddle\WebsocketHandleMiddleware.cs:line 58
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Tools.Helper.Middles.ExceptionMiddle.ExceptionMiddleware.Invoke(HttpContext context) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Helper\Middles\ExceptionMiddle\ExceptionMiddleware.cs:line 31
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  2024-04-29 11:29:43  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+异常原因：The SSL connection could not be established, see inner exception.；
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tools.Common.Http.Get(String Url) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Common\Http.cs:line 47
+   at Tools.Helper.IpifyHelper.GetLocation_CountryCity(String ip) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Helper\IpifyHelper.cs:line 30
+   at Tools.Instance.UserService.Login(String account, String password, String ip) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Instance\UserService.cs:line 340
+   at Tools.API.Controllers.UsersController.Login(String account, String password, String ip) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.API\Controllers\UsersController.cs:line 73
+   at lambda_method27(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Tools.Helper.Middles.WebSocketMiddle.WebSocketHandleMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Helper\Middles\WebSocketMiddle\WebsocketHandleMiddleware.cs:line 58
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Tools.Helper.Middles.ExceptionMiddle.ExceptionMiddleware.Invoke(HttpContext context) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Helper\Middles\ExceptionMiddle\ExceptionMiddleware.cs:line 31
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  2024-04-29 11:30:09  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+异常原因：The SSL connection could not be established, see inner exception.；
+   at System.Net.HttpWebRequest.GetResponse()
+   at Tools.Common.Http.Get(String Url) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Common\Http.cs:line 47
+   at Tools.Helper.IpifyHelper.GetLocation_CountryCity(String ip) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Helper\IpifyHelper.cs:line 30
+   at Tools.Instance.UserService.Login(String account, String password, String ip) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Instance\UserService.cs:line 340
+   at Tools.API.Controllers.UsersController.Login(String account, String password, String ip) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.API\Controllers\UsersController.cs:line 73
+   at lambda_method27(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Tools.Helper.Middles.WebSocketMiddle.WebSocketHandleMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Helper\Middles\WebSocketMiddle\WebsocketHandleMiddleware.cs:line 58
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Tools.Helper.Middles.ExceptionMiddle.ExceptionMiddleware.Invoke(HttpContext context) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Helper\Middles\ExceptionMiddle\ExceptionMiddleware.cs:line 31
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  2024-04-29 13:25:29  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+异常原因：Could not load file or assembly 'NPinyin, Version=0.2.6321.26573, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。；
+   at Tools.Common.Config.PYToText(String py)
+   at Tools.API.Controllers.ToolsController.Test(String ip) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.API\Controllers\ToolsController.cs:line 172
+   at lambda_method7(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Tools.Helper.Middles.WebSocketMiddle.WebSocketHandleMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Helper\Middles\WebSocketMiddle\WebsocketHandleMiddleware.cs:line 58
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Tools.Helper.Middles.ExceptionMiddle.ExceptionMiddleware.Invoke(HttpContext context) in C:\Projects\MyProject\Tools-Blog\tools-blog\ToolsAPI\Tools.Helper\Middles\ExceptionMiddle\ExceptionMiddleware.cs:line 31

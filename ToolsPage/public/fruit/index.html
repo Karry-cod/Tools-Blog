@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羊了个羊</title>
+    <style>
+        .page {
+            margin: 0 auto;
+            width: 400px;
+            height: 550px;
+            border: 1px solid black;
+        }
+
+        .header {
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            background-color: green;
+            line-height: 50px;
+            color: white;
+        }
+
+        .body {
+            height: 400px;
+            background-color: brown;
+            text-align: center;
+            line-height: 400px;
+            color: white;
+            position: relative;
+        }
+
+        .footer {
+            height: 100px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .plate {
+            width: 40px;
+            height: 40px;
+            border: 1px solid gray;
+            box-shadow: 0px 0px 5px 1px grya;
+            background-size: cover;
+            position: absolute;
+            cursor: pointer;
+            background-color: white;
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 实际页面 -->
+    <div class="page">
+        <!-- 头部 - 倒计时 -->
+        <div class="header">
+            倒计时
+        </div>
+        <!-- 中心 - 牌库 -->
+        <div class="body">
+            牌库
+        </div>
+        <!-- 底部 - 待消除区 -->
+        <div class="footer">
+            底部
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let times = 100; // 倒计时
+    let plates = [{
+        id: "apple",
+        img: "./imgs/apple.png",
+        count: 16
+    }, {
+        id: "pear",
+        img: "./imgs/pear.png",
+        count: 18
+    }, {
+        id: "orange",
+        img: "./imgs/orange.png",
+        count: 19
+    }, {
+        id: "banana",
+        img: "./imgs/banana.png",
+        count: 11
+    }]; // 初始牌库：id: 牌型，img: 牌的图片, count: 牌组数量
+    let selecteds = []; // 被选中的牌库
+
+    // 倒计时
+    function CountDown() {
+        let header = document.getElementsByClassName("header")[0];
+        if (times === 0) {
+            header.innerHTML = "Game  Over ！！";
+            alert("时间结束，游戏失败");
+            clearInterval(timer);
+            return;
+        }
+        header.innerHTML = times;
+        times -= 1;
+    }
+
+    // 加载牌库
+    function LoadPlates() {
+        let body = document.getElementsByClassName("body")[0];
+        plates.forEach(plate => {
+            for (let i = 0; i < plate.count * 3; i++) {
+                let dom = document.createElement("div");
+                dom.className = plate.id + " plate";
+                dom.style.backgroundImage = `url("${plate.img}")`;
+                dom.style.top = Math.random() * 360 + "px";
+                dom.style.left = Math.random() * 360 + "px";
+                body.appendChild(dom);
+
+                dom.addEventListener("click", () => {
+                    dom.classList.add("selected");
+                    // 先判断被选中的牌库中是否有同id的牌
+                    let selectedPlate = selecteds.find(d => d.id === plate.id);
+                    if (selectedPlate) {
+                        selectedPlate.doms.push(dom);
+                    } else {
+                        selecteds.push({
+                            id: plate.id,
+                            doms: [dom]
+                        });
+                    }
+                    SelectPlate(dom);
+                });
+            }
+        });
+    }
+
+    // 选中牌
+    function SelectPlate(plate) {
+        let selectedPlates = document.querySelectorAll(".selected");
+        let plateCount = selectedPlates.length;
+        plate.style.top = "430px";
+        plate.style.left = 40 * (plateCount + 1) + "px";
+        selecteds.forEach(d => {
+            if (d.doms.length === 3) {
+                d.doms.forEach(dom => {
+                    dom.remove();
+                });
+                d.doms = [];
+                RefreshPlates();
+            }
+        });
+        if(document.querySelectorAll(".selected").length >= 7){
+            alert("游戏结束");
+        }
+    }
+
+    // 刷新选中牌库的位置
+    function RefreshPlates(){
+        let count = 1;
+        selecteds.forEach(plate => {
+            plate.doms.forEach(dom => {
+                dom.style.left = 40 * (count + 1) + "px";
+                count++;
+            });
+        });
+    }
+
+    // 倒计时
+    let timer = setInterval(() => {
+        CountDown();
+    }, 1000);
+
+    LoadPlates();
+</script>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蹦蹦鸟</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .body{
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .screen {
+            width: 5000px;
+            height: 100%;
+            position: relative;
+            background-color: green;
+            background-image: url("imgs/th.jpg");
+            transition: 0.1s;
+            overflow-y: hidden;
+        }
+
+        .brid {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 45%;
+            left: 40vw;
+            transition: 0.1s;
+            background-image: url("imgs/mriou.png");
+            background-size: cover;
+            z-index: 999;
+        }
+
+        .blocks {
+            background-image: url("imgs/gd.jpg");
+            background-size: 100% 100%;
+        }
+
+        #block-1 {
+            width: 100px;
+            height: 350px;
+            position: absolute;
+            left: 1000px;
+            transform: rotate(180deg);
+        }
+
+        #block-2 {
+            width: 100px;
+            height: 350px;
+            position: absolute;
+            left: 1500px;
+            top: calc(100% - 350px);
+        }
+
+
+        #block-3 {
+            width: 100px;
+            height: 350px;
+            position: absolute;
+            left: 2500px;
+            transform: rotate(180deg);
+        }
+
+        #block-4 {
+            width: 100px;
+            height: 350px;
+            position: absolute;
+            left: 3000px;
+            transform: rotate(180deg);
+        }
+
+        #block-5 {
+            width: 100px;
+            height: 350px;
+            position: absolute;
+            left: 3500px;
+            top: calc(100% - 350px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <!-- 场景 -->
+        <div class="screen">
+            <!-- 障碍物 -->
+            <div class="blocks" id="block-1"></div>
+            <div class="blocks" id="block-2"></div>
+            <div class="blocks" id="block-3"></div>
+            <div class="blocks" id="block-4"></div>
+            <div class="blocks" id="block-5"></div>
+        </div>
+        <!-- 马里奥 -->
+        <div class="brid"></div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let brid = document.getElementsByClassName("brid")[0]; // 马里奥
+    let dropHeight = document.body.clientHeight; // 整个场景的高度， 用于判断马里奥是否掉出场景外
+    let hasDropH = getElementTop(brid); // 马里奥已经下落的距离
+
+    // 马里奥下落
+    function Drop() {
+        hasDropH += 5;
+        brid.style.top = `${hasDropH}px`;
+    }
+
+    // 让马里奥持续下降
+    let timer = setInterval(() => {
+        Drop();
+        if (hasDropH >= dropHeight) {
+            clearInterval(timer);
+            alert("游戏结束");
+        }
+        IsHit();
+    }, 100);
+
+    // 按空格让马里奥上升
+    function Rise() {
+        document.addEventListener("keydown", (e) => {
+            if (e.code === "Space") {
+                clearInterval(timer);
+                hasDropH -= 30;
+                brid.style.top = `${hasDropH}px`;
+                timer = setInterval(() => {
+                    Drop();
+                    if (hasDropH >= dropHeight) {
+                        clearInterval(timer);
+                        alert("游戏结束");
+                    }
+                    IsHit();
+                }, 100);
+                IsHit();
+            }
+        });
+    }
+
+    // 场景移动
+    function ScreenMove() {
+        let screen = document.getElementsByClassName("screen")[0];
+        let moveLenght = 0;
+        let screenTimer = setInterval(() => {
+            moveLenght -= 10;
+            screen.style.left = `${moveLenght}px`;
+            if (moveLenght * -1 >= screen.clientWidth) {
+                alert("游戏结束, 挑战成功！");
+                clearInterval(screenTimer);
+            }
+            IsHit();
+        }, 100);
+    }
+
+    // 判断马里奥是否和管道相撞
+    function IsHit() {
+        // 循环所有管道
+        let blocks = document.getElementsByClassName("blocks");
+        for (let i = 0; i < blocks.length; i++) {
+            let d = blocks[i];
+            let mark = CheckHit(getElementLeft(brid), getElementTop(brid), brid.clientWidth, brid.clientHeight, getElementLeft(d), getElementTop(d), d.clientWidth, d.clientHeight);
+            if (mark) {
+                alert("游戏结束");
+            }
+        }
+    }
+
+    // 判断是否相撞
+    function CheckHit(x1, y1, yw, yh, x2, y2, bw, bh) {
+        var yx = x1;
+        var yr = x1 + yw;
+        var yy = y1;
+        var yb = y1 + yh;
+
+        var bx = x2;
+        var br = x2 + bw;
+        var by = y2;
+        var bb = y2 + bh;
+        //如果鱼的右边小于炮弹的x坐标or鱼的x坐标大于炮弹的右边or鱼的底部小于炮弹的y坐标or鱼的y坐标大于炮弹的底部
+        if (yr < bx || yx > br || yb < by || yy > bb) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    // 获取element的x坐标
+    function getElementLeft(element) {
+        var actualLeft = element.offsetLeft;
+        var current = element.offsetParent;
+        while (current !== null) {
+            actualLeft += current.offsetLeft;
+            current = current.offsetParent;
+        }
+        return actualLeft;
+    }
+    // 获取element的y坐标
+    function getElementTop(element) {
+        var actualTop = element.offsetTop;
+        var current = element.offsetParent;
+        while (current !== null) {
+            actualTop += current.offsetTop;
+            current = current.offsetParent;
+        }
+        return actualTop;
+    }
+
+    Rise();
+    ScreenMove();
+</script>

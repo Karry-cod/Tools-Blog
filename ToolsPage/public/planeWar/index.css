@@ -1,0 +1,64 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    cursor: none;
+}
+
+.body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+video {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.canvas {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.plane {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%) rotate(-90deg);
+    background-image: url(https://5b0988e595225.cdn.sohucs.com/images/20191109/9385746e8b02443db15df63f7eddb1df.png);
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.bullet {
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transition: 0.1s;
+    background-image: url(https://img.wang1314.net/uploadfile/2018/2018-05-22/1526967182451u_13_uw_500_wh_281_hl_2006064_lm5_0716a0f387951da516660fd77b9d18cf_m5.gif);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.enemy {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    transition: 1s;
+    background-image: url(https://img1.baidu.com/it/u=3661934041,2261637679&fm=253&fmt=auto&app=120&f=JPEG?w=640&h=360);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: 50%;
+}

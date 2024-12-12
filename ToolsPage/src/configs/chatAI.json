@@ -1,0 +1,22 @@
+{
+    "ALIYUN_TYQW": {
+        "title": "阿里云 - 通义千问",
+        "word": "官网地址：https://help.aliyun.com/zh/model-studio/user-guide/text-generation?spm=a2c4g.11186623.help-menu-2400256.d_1_0_0.52192562IlnIg2#e542bf4f27i7a",
+        "api_key": "sk-5ef44811224e484eb473d46f886b4f68",
+        "appId": "c118e1349f234253906253561104cc16",
+        "model": "qwen-plus",
+        "textAI": {
+            "url": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
+            "messages": [
+                {
+                    "role": "system",
+                    "content": "You are an AI assistant that helps people find information."
+                },
+                {
+                    "role": "assistant",
+                    "content": "你好，我是微客AI，请问有什么需要我帮助的吗？"
+                }
+            ]
+        }
+    }
+}

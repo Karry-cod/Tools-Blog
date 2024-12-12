@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Projects\MyProject\Dists\Tools-Blog</_PublishTargetUrl>
+    <History>True|2024-04-29T08:56:01.5797134Z;True|2024-04-28T17:45:40.7978786+08:00;True|2024-04-28T13:45:02.4375757+08:00;True|2024-04-28T11:17:32.4267649+08:00;True|2024-04-10T14:45:35.6207972+08:00;False|2024-04-10T14:44:39.3996078+08:00;False|2024-04-10T14:44:02.0910228+08:00;True|2024-04-10T14:43:06.3702111+08:00;True|2024-04-10T14:11:03.5572844+08:00;True|2024-04-10T14:08:56.6105864+08:00;True|2024-04-10T14:00:06.5319624+08:00;True|2024-04-10T13:49:27.1745372+08:00;True|2024-04-10T11:41:31.5524173+08:00;True|2024-04-10T11:38:56.8658207+08:00;True|2024-04-10T11:23:25.3723604+08:00;True|2024-04-01T16:42:03.2545382+08:00;</History>
+    <LastFailureDetails />
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="Default">
+      <Value>server=karry.org.cn%3bdatabase=Blob_Tools%3buid=root%3bpassword=x14qkrsn</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

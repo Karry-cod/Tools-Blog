@@ -1,0 +1,164 @@
+// 暗黑模式
+@forward 'element-plus/theme-chalk/src/dark/var.scss' with (
+  $bg-color: (
+    'page': #0a0a0a,
+    '': #626aef,
+    'overlay': #1d1e1f,
+  )
+);
+
+:root{
+  // 边框
+  --box-border:  1px solid rgb(230, 224, 224, 0.7);
+
+  // 鼠标滑入cursor
+  --cursor-pointer: url(@/static/imgs/cursor_pointer.png), pointer !important;
+}
+
+/**
+    sass基本用法：
+        $：定义（或启用）变量
+        @mixin：定义代码块（可传参{参数可以给默认值}）
+        @include：使用定义的代码块
+*/
+$boxShadow: 0 2px 12px 0 rgba(0, 0, 0, 0.3);
+
+@mixin margin {
+  margin-bottom: 15px;
+}
+
+@mixin title {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: left;
+  font-family: "楷体";
+  display: block;
+  padding: 10px;
+  padding-left: 30px;
+  background-color: rgba(219, 216, 216, 0.6);
+  font-style: italic;
+  position: relative;
+
+  &:before{
+    position: absolute;
+    content: "";
+    background-color: rgb(9, 224, 9);
+    width: 10px;
+    height: 80%;
+    top: 10%;
+    left: 10px;
+  }
+}
+
+.boxSide {
+  box-shadow: $boxShadow;
+  padding: 15px;
+  background-color: transparent;
+  @include margin();
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-radius: 3px;
+  animation: boxSide 0.7s;
+
+  & > .title{
+    font-size: 22px;
+    font-weight: 600;
+    text-align: left;
+    font-family: "楷体";
+  }
+}
+
+.child_boxSide{
+  animation: boxSide 0.7s;
+  height: 100%;
+  overflow-y: scroll;
+
+  .el-button{
+    border-radius: 0px;
+  }
+
+  &::-webkit-scrollbar{
+    width: 0px
+  }
+
+  & > .title{
+    @include title();
+  }
+
+  .aBox{
+    margin-top: 10px;
+    padding: 10px;
+    padding-left: 30px;
+    background-color: rgb(245, 240, 240, 0.8);
+    display: inline-block;
+    font-size: 1.1rem;
+    position: relative;
+
+    &:before{
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 60%;
+      top: 20%;
+      left: 10px;
+      background-color: rgb(248, 68, 68);
+    }
+
+    a {
+      font-size: 20px;
+      color: #6970f5;
+      font-style: italic;
+    }
+
+    .line{
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+  .block{
+    display: block;
+  }
+
+  .body{
+    padding-top: 10px;
+  }
+}
+
+@keyframes boxSide{
+  0%{
+    transform: translateX(-20%);
+    opacity: 0;
+  }100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.module-Box{
+  margin-top: 20px;
+
+  > .module-Title{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 20px;
+    padding-left: 20px;
+    border-bottom: 1px solid rgb(220, 212, 212);
+
+    &:hover{
+      &::before{
+        content: "#";
+        color: green;
+        position: absolute;
+        left: -2px;
+        top: 0px;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        font-size: 20px;
+      }
+    }
+  }
+}

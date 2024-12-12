@@ -1,0 +1,9 @@
+obj/
+bin/
+*.dll
+Debug/
+Release/
+.vs
+/ToolsAPI/.vs/ProjectEvaluation/toolsapi.projects.v7.bin
+/ToolsAPI/.vs/ToolsAPI/v17/.suo
+/ToolsAPI/.vs/ProjectEvaluation/toolsapi.metadata.v7.bin

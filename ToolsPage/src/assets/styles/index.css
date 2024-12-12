@@ -1,0 +1,499 @@
+.start_green{
+    bottom: 2%;
+    left: 28%;
+}
+
+.start_yellow{
+    top: 30%;
+    left: 4.4%;
+}
+
+.start_blue{
+    right: 28%;
+    top: 5.5%;
+}
+
+.start_red{
+    right: 4%;
+    bottom: 25.5%;
+}
+
+/* 绿色待机位置 */
+.wait_green_1{
+    bottom: 6.3%;
+    left: 9.8%;
+}
+.wait_green_2{
+    bottom: 6.3%;
+    left: 17.6%;
+}
+.wait_green_3{
+    bottom: 14.6%;
+    left: 9.8%;
+}
+.wait_green_4{
+    bottom: 14.6%;
+    left: 17.6%;
+}
+
+/* 黄色待机位置 */
+.wait_yellow_1{
+    top: 19%;
+    left: 9.8%;
+}
+.wait_yellow_2{
+    top: 19%;
+    left: 17.6%;
+}
+.wait_yellow_3{
+    top: 11%;
+    left: 9.8%;
+}
+.wait_yellow_4{
+    top: 11%;
+    left: 17.6%;
+}
+
+/* 蓝色待机位置 */
+.wait_blue_1{
+    top: 19%;
+    right: 17.3%;
+}
+.wait_blue_2{
+    top: 19%;
+    right: 9.6%;
+}
+.wait_blue_3{
+    top: 10.9%;
+    right: 17.3%;
+}
+.wait_blue_4{
+    top: 10.9%;
+    right: 9.6%;
+}
+
+/* 红色待机位置 */
+.wait_red_1{
+    bottom: 6.3%;
+    right: 17.4%;
+}
+.wait_red_2{
+    bottom: 6.3%;
+    right: 9.5%;
+}
+.wait_red_3{
+    bottom: 14.3%;
+    right: 17.4%;
+}
+.wait_red_4{
+    bottom: 14.3%;
+    right: 9.5%;
+}
+
+
+/* 路径点位 */
+#dont_1{
+    bottom: 8%;
+    left: 32%;
+}
+
+#dont_2{
+    bottom: 14%;
+    left: 30%;
+}
+
+#dont_3{
+    bottom: 19%;
+    left: 30%;
+}
+
+#dont_4{
+    bottom: 25%;
+    left: 32%;
+}
+
+#dont_5{
+    bottom: 29%;
+    left: 27%;
+}
+
+#dont_6{
+    bottom: 27%;
+    left: 22%;
+}
+
+#dont_7{
+    bottom: 27%;
+    left: 17%;
+}
+
+#dont_8{
+    bottom: 29.5%;
+    left: 11.5%;
+}
+
+#dont_9{
+    bottom: 35%;
+    left: 10%;
+}
+
+#dont_10{
+    bottom: 40%;
+    left: 10%;
+}
+
+#dont_11{
+    bottom: 45.3%;
+    left: 10%;
+}
+
+#dont_12{
+    bottom: 50.5%;
+    left: 10%;
+}
+
+#dont_13{
+    bottom: 55.5%;
+    left: 10%;
+}
+
+#dont_14{
+    bottom: 61%;
+    left: 11.5%;
+}
+
+#dont_15{
+    bottom: 63%;
+    left: 17%;
+}
+
+#dont_16{
+    bottom: 63%;
+    left: 22%;
+}
+
+#dont_17{
+    bottom: 61%;
+    left: 27.5%;
+}
+
+#dont_18{
+    bottom: 65.5%;
+    left: 32%;
+}
+
+#dont_19{
+    top: 23.7%;
+    left: 30%;
+}
+
+#dont_20{
+    top: 18.5%;
+    left: 30%;
+}
+
+#dont_21{
+    top: 12.5%;
+    left: 31.8%;
+}
+
+#dont_22{
+    top: 11%;
+    left: 37.5%;
+}
+
+#dont_23{
+    top: 11%;
+    left: 42.5%;
+}
+
+#dont_24{
+    top: 11%;
+    left: 47.5%;
+}
+
+#dont_25{
+    top: 11%;
+    left: 52.5%;
+}
+
+#dont_26{
+    top: 11%;
+    left: 57.5%;
+}
+
+#dont_27{
+    top: 12.8%;
+    left: 63.5%;
+}
+
+#dont_28{
+    top: 18.5%;
+    left: 65.5%;
+}
+
+#dont_29{
+    top: 23.7%;
+    left: 65.5%;
+}
+
+#dont_30{
+    top: 29.5%;
+    left: 63.5%;
+}
+
+#dont_31{
+    top: 33.5%;
+    left: 68%;
+}
+
+#dont_32{
+    top: 32%;
+    left: 73.3%;
+}
+
+#dont_33{
+    top: 32%;
+    left: 78.3%;
+}
+
+#dont_34{
+    top: 34%;
+    left: 83.5%;
+}
+
+#dont_35{
+    top: 39.5%;
+    right: 9.5%;
+}
+
+#dont_36{
+    top: 44.5%;
+    right: 9.5%;
+}
+
+#dont_37{
+    top: 49.7%;
+    right: 9.5%;
+}
+
+#dont_38{
+    top: 55%;
+    right: 9.5%;
+}
+
+#dont_39{
+    top: 60.2%;
+    right: 9.5%;
+}
+
+#dont_40{
+    top: 65.7%;
+    right: 11.3%;
+}
+
+#dont_41{
+    top: 68%;
+    right: 16.5%;
+}
+
+#dont_42{
+    top: 68%;
+    right: 21.5%;
+}
+
+#dont_43{
+    top: 66%;
+    right: 27.2%;
+}
+
+#dont_44{
+    top: 70%;
+    right: 31.5%;
+}
+
+#dont_45{
+    top: 76%;
+    right: 29.5%;
+}
+
+#dont_46{
+    top: 81.5%;
+    right: 29.5%;
+}
+
+#dont_47{
+    top: 87%;
+    right: 31%;
+}
+
+#dont_48{
+    top: 89%;
+    right: 37%;
+}
+
+#dont_49{
+    top: 89%;
+    right: 42.3%;
+}
+
+#dont_50{
+    top: 89%;
+    right: 47.3%;
+}
+
+#dont_51{
+    top: 89%;
+    right: 52.5%;
+}
+
+#dont_52{
+    top: 89%;
+    right: 57.7%;
+}
+
+#dont_53{
+    bottom: 13.3%;
+    left: 47.5%;
+}
+
+#dont_54{
+    bottom: 18.5%;
+    left: 47.5%;
+}
+
+#dont_55{
+    bottom: 23.7%;
+    left: 47.5%;
+}
+
+#dont_56{
+    bottom: 29%;
+    left: 47.5%;
+}
+
+#dont_57{
+    bottom: 34.3%;
+    left: 47.5%;
+}
+
+#dont_58{
+    bottom: 39.9%;
+    left: 47.5%;
+}
+
+#dont_59{
+    bottom: 45%;
+    left: 17%;
+}
+
+#dont_60{
+    bottom: 45%;
+    left: 22%;
+}
+
+#dont_61{
+    bottom: 45%;
+    left: 27%;
+}
+
+#dont_62{
+    bottom: 45%;
+    left: 32%;
+}
+
+#dont_63{
+    bottom: 45%;
+    left: 37.2%;
+}
+
+#dont_64{
+    bottom: 45%;
+    left: 42.8%;
+}
+
+#dont_65{
+    top: 18.3%;
+    left: 47.5%;
+}
+
+#dont_66{
+    top: 23.6%;
+    left: 47.5%;
+}
+
+#dont_67{
+    top: 28.9%;
+    left: 47.5%;
+}
+
+#dont_68{
+    top: 34%;
+    left: 47.5%;
+}
+
+#dont_69{
+    top: 39.4%;
+    left: 47.5%;
+}
+
+#dont_70{
+    top: 45%;
+    left: 47.5%;
+}
+
+#dont_71{
+    bottom: 45%;
+    right: 16.7%;
+}
+
+#dont_72{
+    bottom: 45%;
+    right: 21.7%;
+}
+
+#dont_73{
+    bottom: 45%;
+    right: 26.9%;
+}
+
+#dont_74{
+    bottom: 45%;
+    right: 31.9%;
+}
+
+#dont_75{
+    bottom: 45%;
+    right: 37%;
+}
+
+#dont_76{
+    bottom: 45%;
+    right: 42.6%;
+}
+
+.plane{
+    background-color: red;
+    transition: 0.3s;
+    background-size: cover;
+}
+
+.plane_green{
+    background-color: green;
+    background-image: url('@/assets/imgs/fttl.jpg');
+}
+
+.plane_blue{
+    background-color: blue;
+    background-image: url("@/assets/imgs/jienigui.jpg");
+}
+
+.plane_yellow{
+    background-color: yellow;
+    background-image: url('@/assets/imgs/pkq.jpg');
+}
+
+.plane_red{
+    background-color: red;
+    background-image: url('@/assets/imgs/xhl.jpg');
+}
